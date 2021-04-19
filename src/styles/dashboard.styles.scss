@@ -1,0 +1,135 @@
+.text-wallets {
+  color: $field-color;
+  float: left;
+  font-size: 88%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $colorMain;
+  padding: 10px;
+  border: 2px solid black;
+  div {
+    background-color: $color-component;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    //width: 100%;
+    //margin: 10px;
+    //line-height: 75px;
+  }
+
+  .box {
+    flex-grow: 1;
+    border: 3px solid rgba(16, 128, 180, 0.2);
+  }
+
+  .box1 {
+    flex-grow: 2;
+    border: 3px solid rgba(219, 241, 139, 0.2);
+  }
+}
+
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $colorMain;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.flex-item {
+  display: inherit;
+  width: 10%;
+  height: 50px;
+  background-color: $colorGray;
+  margin: 5px;
+}
+.flex-item.flex-grow1 {
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+}
+.flex-item.flex-grow2 {
+  -webkit-flex-grow: 4;
+  -ms-flex-grow: 4;
+  flex-grow: 4;
+}
+
+#main {
+  //width: 80%;
+  //max-width: 900px;
+  //padding: 30px 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#tabs {
+  position: relative;
+}
+
+span.tags {
+  position: fixed;
+  display: none;
+}
+
+.tags + a {
+  display: block;
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  //background-color: #eee;
+  margin-bottom: -1px;
+  border-radius: 8px 8px 0 0;
+  margin-right: 10px;
+  text-decoration: none;
+  color: $field-color;
+  font-size: 50%;
+}
+
+.tags:target + a {
+  background-color: $color-component;
+  border-bottom-color: $colorYellow;
+  color: $colorYellow;
+  font-size: 50%;
+}
+
+#pnl_1,
+#pnl_2,
+#pnl_3 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: none;
+  clear: both;
+  overflow: hidden;
+}
+
+#pnl_1 > div,
+#pnl_2 > div,
+#pnl_3 > div {
+  opacity: 0;
+  transition: all 0.1s ease;
+  //padding: 30px;
+}
+
+#uno:target ~ #pnl_1,
+#dos:target ~ #pnl_2,
+#tres:target ~ #pnl_3 {
+  position: static;
+  border: 1px solid #ddd;
+}
+
+#uno:target ~ #pnl_1 > div,
+#dos:target ~ #pnl_2 > div,
+#tres:target ~ #pnl_3 > div {
+  opacity: 1;
+  transition: all 1s ease;
+}

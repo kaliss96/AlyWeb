@@ -1,0 +1,76 @@
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+ ==========================
+ Sección de contenido principal.
+ ==========================
+ */
+
+.contenido-principal {
+  width: 68%;
+  background-color: #5a5353;
+}
+
+/* 
+ ==========================
+ Sección de las billeteras.
+ ==========================
+ */
+
+/* Contenedor */
+.billeteras {
+  width: 30%;
+  background-color: #5a5353;
+  order: -1;
+  padding: 0 10px;
+  min-height: 600px;
+}
+
+/* Encabezado */
+.billeteras h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+/* Item. */
+.billetera-item {
+  //margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  //padding: 8px;
+  background-color: #000000;
+}
+
+.imagen-item {
+  width: 20%;
+}
+
+.imagen-item img {
+  width: 100%;
+}
+
+.img_coin {
+  width: 10px;
+}
+
+.contenido-item {
+  //height: 70px;
+  width: 80%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lado-izquierdo {
+  width: 50%;
+}
+
+.lado-derecho {
+  width: 50%;
+  text-align: end;
+}

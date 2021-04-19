@@ -1,0 +1,19 @@
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 30vw;
+  min-width: 300px;
+  min-height: 100vh;
+}
+
+.containerInputs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid yellow;
+  border-radius: 12px;
+  padding: 25px 25px;
+}

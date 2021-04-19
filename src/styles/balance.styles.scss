@@ -1,0 +1,36 @@
+.container-balance {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  > div {
+    padding: 10px;
+  }
+}
+
+.textTitleBal {
+  color: $colorGray;
+  font-size: 45%;
+  line-height: 18px;
+  float: left;
+}
+
+.textContentBal {
+  color: $colorYellow;
+  font-size: 39%;
+  line-height: 20px;
+  text-align: left;
+}
+
+.style-balance {
+  margin: 5px;
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.style-lineal {
+  color: "green";
+  size: 1;
+  width: "150";
+}

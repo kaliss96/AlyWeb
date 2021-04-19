@@ -1,0 +1,57 @@
+@import "./palette.scss";
+@import "./sign-in.styles.scss";
+
+@import "./form-input.styles.scss";
+@import "./custom-button.styles.scss";
+@import "./custom-label.styles.scss";
+@import "./register.styles.scss";
+@import "./navbar.styles.scss";
+@import "./dashboard.styles.scss";
+@import "./search-bar.styles.scss";
+@import "./table.styles.scss";
+@import "./modal.styles.scss";
+@import "./balance.styles.scss";
+@import "./image.styles.scss";
+@import "./send-founds.styles.scss";
+@import "./coins.styles.scss";
+
+// Palette colors
+$colorMain: #000;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $colorMain;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.linka {
+  color: white;
+  display: none;
+}
+
+tr {
+  cursor: pointer;
+}
+.colordate {
+  text-color: white;
+  color: -internal-light-dark(red, blue) !important;
+}
+
+::-webkit-calendar-picker-indicator {
+  color: green;
+}

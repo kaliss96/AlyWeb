@@ -1,0 +1,136 @@
+.sign-in__actions {
+  margin: 20px 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sign-in__actions .custom-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    height: 25px;
+    border-radius: 4px;
+    text-transform: none;
+  }
+
+  .sign-in__actions .custom-button-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    height: 25px;
+    border-radius: 4px;
+    text-transform: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  .sign-in__actions .custom-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    height: 25px;
+    border-radius: 4px;
+    text-transform: none;
+  }
+
+  .sign-in__actions .custom-button-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    height: 25px;
+    border-radius: 4px;
+    text-transform: none;
+  }
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  .sign-in__actions {
+    background-color: rgb(215, 230, 173);
+  }
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  .sign-in__actions {
+    background-color: rgb(230, 173, 211);
+  }
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .sign-in__actions {
+    display: flex;
+  }
+}
+
+.custom-button {
+  min-width: 165px;
+  width: auto;
+  letter-spacing: 0.5px;
+  padding: 15px;
+  font-size: 15px;
+  background-color: $colorMain;
+
+  color: $colorYellow;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border-radius: 25px;
+    background-color: $colorYellow;
+    color: $colorBlack;
+    border: 1px solid $colorYellow;
+  }
+}
+
+.custom-button-empty {
+  min-width: 165px;
+  width: auto;
+  letter-spacing: 0.5px;
+  padding: 15px;
+  font-size: 15px;
+  background-color: $colorMain;
+  border-radius: 25px;
+  color: $colorYellow;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    background-color: $colorYellow;
+    color: $colorBlack;
+    border: 1px solid $colorYellow;
+  }
+}
+
+.custom-button-register {
+  min-width: 415px;
+  width: auto;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: $colorYellow;
+  border-radius: 25px;
+  color: $colorMain;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 25px;
+    background-color: $colorYellow;
+    color: $colorBlack;
+    border: 1px solid $colorYellow;
+  }
+}

@@ -1,0 +1,113 @@
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $colorMain;
+}
+
+.group {
+  position: relative;
+  margin: 10px 0;
+
+  i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    color: $colorYellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-50%);
+  }
+  .form-input {
+    background: none;
+    background-color: $colorMain;
+    color: $colorGray;
+    font-size: 18px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid $field-color;
+    border: 1px solid $colorYellow;
+    padding: 5px 5px;
+
+    //display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
+  }
+  .form-input-birth {
+    background: none;
+    background-color: $colorMain;
+    color: $colorGray;
+    font-size: 18px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid $field-color;
+    border: 1px solid $colorYellow;
+    padding: 5px 5px;
+
+    //display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-label {
+    color: $colorGray;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    //transition: 300ms ease all;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+
+  .form-eye {
+    background: none;
+    color: $colorYellow;
+  }
+}
+
+.select-day {
+  position: relative;
+  margin: 17px 0;
+  margin-right: 0.5rem;
+
+  background: none;
+  background-color: $colorMain;
+  color: $colorGray;
+  font-size: 18px;
+  //margin: 5px 0;
+  width: 50%;
+  height: 20%;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid $field-color;
+  border: 1px solid $colorYellow;
+  padding: 5px 5px;
+  &:focus {
+    border: 1px solid $colorYellow;
+  }
+}

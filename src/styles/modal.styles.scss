@@ -1,0 +1,73 @@
+.modal-contenido {
+  background-color: $colorMain;
+  width: 500px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+}
+.modal {
+  background-color: #4c434387;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+#miModalTran {
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/********************************************************/
+.container-modal {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  > div {
+    width: 50%;
+    padding: 10px;
+    background: $colorMain;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.content-one {
+  text-align: left;
+}
+
+.content-twoo {
+  text-align: right;
+}
+
+.card__footer {
+  min-height: 30px;
+  padding: var(--relleno);
+  overflow: hidden;
+}
+
+.textFootModal {
+  text-align: center;
+  color: $colorYellow;
+}
+
+.textTitle {
+  color: $colorYellow;
+}
+
+.textContent {
+  color: $field-color;
+}
+
+.tittle-modal {
+  color: $colorYellow;
+  font-size: 125%;
+  text-align: center;
+}
