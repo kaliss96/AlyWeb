@@ -1,0 +1,27 @@
+.sect-trade {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tittle-desc {
+  color: #fecb2e;
+  font-size: 25px;
+}
+
+.tittle-adr {
+  color: gray;
+  font-size: 15px;
+}
+
+.text-adr {
+  color: #fecb2e;
+  font-size: 12px;
+}
+
+.icons-wall {
+  color: white;
+  width: 5rem !important;
+  height: 5rem !important;
+}

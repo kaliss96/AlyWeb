@@ -1,0 +1,66 @@
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  position: relative;
+  color: #fecb2e !important;
+}
+
+.form-check-label {
+  color: #fecb2e !important;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 0.75rem;
+}
+
+.form-check-input {
+  position: static;
+  margin-top: 0;
+  margin-right: 0.45rem;
+  margin-left: 0;
+}
+
+.btn {
+  display: block;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #fecb2e;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.my-2 {
+  margin-bottom: 0.6rem !important;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #fecb2e;
+  color: black;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.terms-cond {
+  color: white;
+}

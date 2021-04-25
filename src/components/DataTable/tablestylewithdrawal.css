@@ -1,0 +1,74 @@
+.table-component {
+  margin: 0.5rem 0;
+  width: 100%;
+  max-height: 30rem;
+  /* overflow: hidden;
+  overflow-y: auto; */
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.table-component__content {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr.table-component__content--row td,
+tr.table-component__content--row th {
+  padding: 0.5rem;
+  text-align: left;
+}
+​ tr.table-component__content--row td {
+  color: aliceblue;
+}
+​ tr.table-component__content--row th {
+  border-bottom: 2px solid yellow;
+  color: yellow;
+  position: sticky;
+  top: 0;
+  padding-top: 0;
+  background-color: black;
+}
+​ .table-component__content--row.pair {
+  background-color: black;
+}
+​ tr {
+  color: blue !important;
+}
+​ .selectable {
+  cursor: pointer;
+}
+
+​.table-component__content--row.pair.selectable:hover {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+​.table-component__content--row.odd.selectable:hover {
+  background-color: rgba(0, 0, 0, 0.781);
+}
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+}
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: white;
+  background-color: #484747;
+  cursor: pointer;
+}
+
+ul.pagination li a.active2 {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}

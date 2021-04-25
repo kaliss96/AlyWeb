@@ -1,0 +1,33 @@
+.text-white{
+    color: aliceblue;
+}
+
+.tittle-aly {
+    font-size: 25px;
+}
+
+.letters-aly-wallet {
+    margin-top: 2rem;
+}
+
+.letters-aly {
+    color: gray;
+    text-align: left;
+}
+
+.letters-balance-wallet {
+    margin-top: 2rem;
+}
+
+.letters-balance {
+    color: gray;
+    text-align: right;
+}
+
+.color-bold {
+    color: #fecb2e;
+}
+
+.box-wall {
+    color: black;
+}

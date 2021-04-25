@@ -15,8 +15,12 @@ export default function Navbar() {
 		3: 'Cajero',
 	}
 
+	const [isLogin, setIsLogin] = useState(true)
+
 	const openModal = () => {}
 	const closeModal = () => {}
+
+	if (!isLogin) return null
  
 	return (
 		<header className='navbar'>

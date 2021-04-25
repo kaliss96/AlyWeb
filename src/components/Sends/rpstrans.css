@@ -1,0 +1,98 @@
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1192px) {
+  .description-send {
+    display: none;
+  }
+
+  .cod-qr {
+    display: none;
+  }
+
+  .cont-text-bal {
+    display: none;
+  }
+
+  .style-mont-money {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .mont-aly {
+    width: 50%;
+  }
+
+  .cant-usd {
+    width: 50%;
+  }
+
+  .btn-send {
+    display: none;
+  }
+
+  .botonera-sends {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .btn-send-resp {
+    display: block;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #feca2eb7;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .btn-send:hover {
+    border-radius: 10px;
+    background-color: #feca2eb7;
+    color: black;
+    font-weight: 600;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cont-mark-bal {
+    width: 72%;
+  }
+
+  .style-mont-money {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .mont-aly {
+    width: 25%;
+  }
+
+  .cant-usd {
+    width: 25%;
+  }
+
+  .botonera-sends {
+    display: none;
+  }
+}
