@@ -1,3 +1,41 @@
+.container-flex-balance-text {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  //border: 2px solid black;
+}
+
+.container-flex-balance {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  //border: 2px solid black;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cont-types-coins {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* .container-flex-balance div {
+  background-color: gainsboro;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border: 2px solid black;
+} */
+
+.cont-text-bal {
+  width: 100%;
+}
+/**************************/
 .container-balance {
   display: -ms-flex;
   display: -webkit-flex;

@@ -1,11 +1,5 @@
-@mixin shrinkLabel {
-  top: -14px;
-  font-size: 12px;
-  color: $colorMain;
-}
-
-.group {
-  position: relative;
+.group-addresses {
+  //position: relative;
   margin: 10px 0;
 
   i {
@@ -27,8 +21,8 @@
     width: 100%;
     border: none;
     border-radius: 5px;
-    border-bottom: 1px solid $field-color;
-    border: 1px solid $colorGray;
+    /* border-bottom: 1px solid $field-color;
+    border: 1px solid $colorYellow; */
     padding: 5px 5px;
 
     //display: block;
@@ -90,24 +84,8 @@
   }
 }
 
-.select-day {
-  position: relative;
-  margin: 17px 0;
-  margin-right: 0.5rem;
-
-  background: none;
-  background-color: $colorMain;
-  color: $colorGray;
-  font-size: 18px;
-  //margin: 5px 0;
-  width: 50%;
-  height: 20%;
-  border: none;
-  border-radius: 5px;
-  border-bottom: 1px solid $field-color;
-  border: 1px solid $colorYellow;
-  padding: 5px 5px;
-  &:focus {
-    border: 1px solid $colorYellow;
-  }
+.tittle-wallet {
+  float: left;
+  color: $colorYellow;
+  font-size: 40%;
 }

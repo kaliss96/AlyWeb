@@ -1,7 +1,7 @@
 .text-wallets {
   color: $field-color;
   float: left;
-  font-size: 88%;
+  font-size: 80%;
 }
 
 .flex-container {
@@ -10,12 +10,12 @@
   justify-content: center;
   background-color: $colorMain;
   padding: 10px;
-  border: 2px solid black;
+  //border: 2px solid black;
   div {
     background-color: $color-component;
     text-align: center;
     font-size: 30px;
-    border: 2px solid black;
+    border: 2px solid;
     //width: 100%;
     //margin: 10px;
     //line-height: 75px;
@@ -38,7 +38,7 @@
   justify-content: center;
   background-color: $colorMain;
   padding: 10px;
-  border: 2px solid black;
+  //border: 2px solid black;
 }
 
 .flex-item {

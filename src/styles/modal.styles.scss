@@ -1,73 +1,93 @@
-.modal-contenido {
-  background-color: $colorMain;
-  width: 500px;
-  padding: 10px 20px;
-  margin: 20% auto;
-  position: relative;
-}
+/* Background effect. It covers the entire site */
 .modal {
-  background-color: #4c434387;
-  position: fixed;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: #0000008f; /* Overlay effect: translucent background: black w/ partial opacity */
+  z-index: 1; /* Overlay effect: positioned over other containers */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  position: fixed; /* Fix position on the top-left corner*/
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 1s;
-}
-#miModalTran {
-  &:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 80px; /* Location of the content container */
 }
 
-/********************************************************/
-.container-modal {
-  display: -ms-flex;
-  display: -webkit-flex;
+/* Modal content */
+.modal-content {
+  background-color: #151515;
+  width: 70%; /* Width in proportion to its parent container*/
+  max-width: 640px; /* Max width where it stops expanding */
+  height: 70%; /* Height in proportion to its parent container */
+  margin: auto; /* Auto margin according to the element width */
+  padding: 10px;
+  border: 1px solid #ffc107;
+  border-radius: 20px; /* Optional. Rounds container corners */
+}
+
+.dtl-trs {
+  color: #ffc107;
+  font-size: 25px;
+}
+
+.modal-flex {
   display: flex;
-  flex-wrap: nowrap;
-  > div {
-    width: 50%;
-    padding: 10px;
-    background: $colorMain;
-    &:first-child {
-      margin-right: 10px;
-    }
-  }
+  height: 100%; /* 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  padding: 1.5rem;
 }
 
-.content-one {
-  text-align: left;
+.modal-info {
+  background-color: #888;
+  border: 1px solid #888;
 }
 
-.content-twoo {
-  text-align: right;
+/* Close button */
+.close {
+  color: #aaaaaa;
+  float: right; /* Positioned to the right of the parent container whichever size it is */
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.card__footer {
-  min-height: 30px;
-  padding: var(--relleno);
-  overflow: hidden;
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.textFootModal {
+/*****************************/
+.card{
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  min-width: 0; 
+  word-wrap: break-word; 
+  background-clip: border-box; 
+  border: 1px solid rgba(0, 0, 0, 0.125); 
+  border-radius: 0.25rem; 
+  background-color: #161d29; 
+  margin: auto 1rem !important;
+}
+.card-header{
+  padding: 0.75rem 1.25rem; 
+  margin-bottom: 0; 
+  background-color: rgba(0, 0, 0, 0.03); 
+  border-bottom: 1px solid #fff; 
+  color: white; 
   text-align: center;
-  color: $colorYellow;
+  font-family: Roboto, Arial, Helvetica, sans-serif !important;
+  font-weight: 400;
 }
-
-.textTitle {
-  color: $colorYellow;
+.card-body{
+  flex: 1 1 auto; 
+  min-height: 1px; 
+  padding: 1.25rem;
 }
-
-.textContent {
-  color: $field-color;
-}
-
-.tittle-modal {
-  color: $colorYellow;
-  font-size: 125%;
-  text-align: center;
+.card-footer{
+  padding: 0.75rem 1.25rem; 
+  background-color: #161d29; 
+  border-top: 1px solid white;
 }

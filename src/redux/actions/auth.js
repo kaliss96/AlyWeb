@@ -1,7 +1,10 @@
-import { LOAD_USER, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from "./types";
+import { LOAD_USER, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL } from "./types";
+import { decodeToken, encodeToken } from '../../api/crypto'
 
-export const fxLoadUser = () => (dispatch, getState) => {
-    const token = getState().auth.token;
+import api from '../../api/api'
+export const RDX_LOADUSER = () => (dispatch) => {
+    let secureToken = localStorage.getItem('_tkn')
+    let token = decodeToken(secureToken)
     if(token){
         dispatch({ type: LOAD_USER});
     }else{
@@ -9,7 +12,36 @@ export const fxLoadUser = () => (dispatch, getState) => {
     }
 }
 
-export const fxLogin = credentials => (dispatch) => {
-    
+export const RDX_LOGIN = credentials => (dispatch) => {
+    api.auth.signin(credentials).then(response=> {
+        
+        if(response?.error && response.error){
+            dispatch({
+                type: LOGIN_FAIL,
+                payload: response.message
+            })
+        }else {
+            localStorage.setItem("_tkn", encodeToken(response.token))
+            const user={
+                id: response.id,
+                username: response.username,
+                email: response.email,
+                first_name: response.first_name,
+                last_name: response.last_name,
+                birthday: response.birthday,
+                executive: response.executive,
+                fee: response.fee
+            }
+
+            dispatch({
+                type: LOGIN_SUCCESS,
+                payload: user
+            })
+        }
+
+
+    }).catch(error=>{
+        console.log(error)
+    })
 }
 

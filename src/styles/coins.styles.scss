@@ -67,10 +67,27 @@
 }
 
 .lado-izquierdo {
+  display: flex;
   width: 50%;
 }
 
 .lado-derecho {
+  display: flex;
   width: 50%;
   text-align: end;
+}
+
+.tittle-left-coin {
+  color: #fecb2e;
+  font-size: 40%;
+}
+
+.cont-left-coin {
+  color: white;
+  font-size: 40%;
+}
+
+.money-left-coin {
+  color: #fecb2e;
+  font-size: 40%;
 }

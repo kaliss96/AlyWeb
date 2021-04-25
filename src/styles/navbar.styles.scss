@@ -14,7 +14,7 @@
   // position: relative;
   border-radius: 50px;
   border: 1px solid $colorYellow;
-  width: 250px;
+  width: 150px;
   &:active {
     transform: scale(0.95);
   }
@@ -28,9 +28,9 @@
   display: flex;
 
   justify-items: center;
-  grid-gap: 5px;
+  //grid-gap: 5px;
   align-items: center;
-  padding: 0 6px;
+  //padding: 0 6px;
 }
 
 .navbar__brand {
@@ -40,13 +40,14 @@
 // navigation items
 .navbar__options {
   display: flex;
+  margin-left:70px;
   flex-direction: row;
   align-items: center;
   position: relative;
   border-radius: 50px;
   border: 1px solid $colorYellow;
   padding: 1px;
-
+   width:245px;
   .navbar__item {
     height: 100%;
     color: #fff;
@@ -74,7 +75,7 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
-
+  margin-left: 10px;
   border: 1px solid $colorYellow;
   display: flex;
   align-items: center;

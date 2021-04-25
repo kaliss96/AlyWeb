@@ -9,6 +9,7 @@ $border-radius-round: 5px;
   font-size: 1rem;
   transition: border-color 0.25s, background-color 0.25s;
   width: 500px;
+  margin-left:180px!important;
   &:focus-within {
     background-color: lighten($field-background, 10);
     border-color: $line-gray;

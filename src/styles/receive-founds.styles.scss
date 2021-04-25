@@ -1,0 +1,69 @@
+.img-receive {
+  text-align: center;
+  font-size: 30px;
+  border-radius: 48%;
+}
+
+.bills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.mountain-styles {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text-logo-aly {
+  color: $colorYellow;
+}
+
+.text-span-aly {
+  color: $colorGray;
+}
+
+.cont-styles-coins {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.botonera-coins {
+  flex-grow: 1 !important;
+}
+
+.found-wallet {
+  display: flex;
+  flex-grow: 1 !important;
+  width: 100%;
+}
+
+.found-wallet-one {
+  width: 70%;
+}
+.found-wallet-twoo {
+  width: 10%;
+}
+
+.found-wallet-three {
+  width: 20%;
+}
+
+.amount-btc {
+  //width: 30%;
+}
+
+.amount-usd {
+  //width: 30%;
+}
+
+.amount-botton {
+  
+}
