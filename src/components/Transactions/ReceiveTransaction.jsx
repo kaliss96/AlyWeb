@@ -1,50 +1,56 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./ReceiveTransaction.css";
-
 import alyCoin from "../../assets/alyCoin.png";
-import { MdContentCopy } from "react-icons/md";
 
 const ReceiveFounds = () => {
   return (
-    <div className="container-flex-balance-text">
-        <div className="cont-text-bal">
-          <label className="title-receive">Recibir Fondos</label>
+    <>
+      <div className="container-flex-receive">
+        <div className="cont-text-receive">
+          <label className="title-receive-money">Recibir Fondos</label>
         </div>
-        <div className="container-flex-balance">
+        <div className="container-receive-money">
           <div className="img-receive">
-            <img src={alyCoin} alt="img-coin" />
+            <img className="cod-qr" src={alyCoin} alt="img-coin" />
           </div>
-          <div className="">
+          <div className="cont-mark-bal">
             <div className="description-receive">
-              <div className="img-container">
-                <img src={alyCoin} className="img-receive" alt="img-coin" />
+              <div className="img-container-receive">
+                <img src={alyCoin} className="icon-receive" alt="img-coin" />
                 <label type="text" className="img-label-receive">
                   Alycoin
                 </label>
               </div>
               <div>
-                <p className="text-title-balance">Precio del mercado</p>
-                <p className="text-content-balance">$ 1.00</p>
+                <p className="title-receive-money">Precio del mercado</p>
+                <p className="content-receive">$ 1.00</p>
               </div>
               <div>
-                <p className="text-title-balance">Balance</p>
-                <p className="text-content-balance">530,000.00 ALY</p>
+                <p className="title-receive-money">Balance</p>
+                <p className="content-receive">530,000.00 ALY</p>
               </div>
               <div>
-                <p className="text-title-balance">Balance USD</p>
-                <p className="text-content-balance">$ 530,000.00</p>
+                <p className="title-receive-money">Balance USD</p>
+                <p className="content-receive">$ 530,000.00</p>
               </div>
             </div>
-            <div className="address-wallet">
-              <p type="text" className="title-wallet">
+            <div className="address-wallet-receive">
+              <p type="text" className="title-wallet-money">
                 Direccion de la billetera
               </p>
-              <label htmlFor="">2930JKKJ3UADF5G2KJ23JKK2J3K2K388HYR4</label>
-              <i><MdContentCopy /></i>
+              <input
+                type="text"
+                className="form-input"
+                name="wall-address"
+                id="wall-address"
+                placeholder="2930JKKJ323223J2K3KJ23JKK2J3K2K3JK23"
+                autoComplete="off"
+              />
             </div>
           </div>
         </div>
       </div>
+    </>
   );
 };
 

@@ -1,22 +1,35 @@
-.recharge-wallet{
-    color: rgb(134, 134, 134);
-    margin-left: 1.1rem;
-    margin-top: 1.4rem;
+.cont-mark-bal {
+  width: 72%;
 }
 
-.title-wallet{
-    color: #fecb2e;
-    font-size: 80%;
+.wall-adress-rec {
+  color: rgb(134, 134, 134);
 }
 
-.title-recharge{
-    color: white;
-    font-size: 1.4rem;
-    margin-left: 1.1rem;
-    
+.recharge-wallet {
+  color: rgb(134, 134, 134);
+  margin-left: 1.1rem;
+  margin-top: 1.4rem;
+}
+
+.title-wallet {
+  color: #fecb2e;
+  font-size: 80%;
+}
+
+.title-recharge {
+  color: white;
+  font-size: 1.4rem;
+  margin-left: 1.1rem;
 }
 
 .cont-text-bal {
-    width: 100%;
-    margin-top: 1.4rem;
-  }
+  width: 100%;
+  margin-top: 1.4rem;
+}
+
+.style-cant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

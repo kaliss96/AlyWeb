@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { connect } from 'react-redux'
+import {Link} from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import InputPassword from '../InputForm/InputPassword';
+import { RDX_LOGIN } from '../../redux/actions/auth'
 
 import img_logo from '../../assets/img_AlyPay.png';
 import foot_logo from '../../assets/foot_alySystem.svg';
+import './Login.css'
 
-import {Link} from 'react-router-dom';
-import Visibility from "@material-ui/icons/Visibility";
-import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import { useForm } from "react-hook-form";
-import './Login.css';
-
-const Login = () => {
-    const [showPassword, setShowPassword] = useState(false);
+const Login = ({RDX_LOGIN,...others}) => {
     const { register, errors, handleSubmit } = useForm();
     
-    const toglePassword = (e) => {
-        setShowPassword(!showPassword);
-    };
+    const handleOnSubmit = (data, e) => {
+        e.preventDefault()
+        RDX_LOGIN(data)
+		
+		others.history.push("/Dashboard");
+        window.location.reload();
+    }
 
     return (
         <div className='sign-in-wrapper'>
@@ -23,7 +26,7 @@ const Login = () => {
                 <div className="containerInputs">
                     <img className='responsive_img_logo' src={img_logo} alt='logo'/>
                     <label className="label-form">Iniciar Sesión</label>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit(handleOnSubmit)}>
                         <div className="form-group">
                             <label type="text" className="label-field">
                                 Correo Electrónico:
@@ -47,46 +50,24 @@ const Login = () => {
                             </div>
                         </div>
                             
-                        <div className="form-group">
-                            <label type="text" className="custom-label">
-                                Contraseña
-                            </label>
-
-                            <div className="group">
-                                <input
-                                    type={!showPassword ? "password" : "text"}
-                                    name="password"
-                                    id="password"
-                                    className="form-input-login"
-                                    autoComplete="off"
-                                    // placeholder="Ingrese Contraseña Aqui"
-                                    ref={register({
-                                    required: "You must specify a password",
-                                    minLength: {
-                                    value: 8,
+                        <InputPassword
+                            title='Contraseña'
+                            name="password"
+                            reference={register({
+                                required: "You must specify a password",
+                                minLength: {
+                                    value: 6,
                                     message: "Password must have at least 8 characters"
-                                    }
-                                })}
-                                />
-                                {
-                                    <i onClick={toglePassword}>
-                                    {!showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </i>
                                 }
-                                
-                                {errors.password && (
-                                    <label className="error-label">
-                                        {errors.password.message}
-                                    </label>
-                                )}
-                            </div>
-                        </div>
+                            })}
+                            errors={errors}
+                        />
                         
                         <div className="button-container">
                             <Link className='signup-button' to='/register'>
-                                Registrarme
+                            Registrarme
                             </Link>
-                            <button className="signin-button" type="button">Iniciar Sesión</button>
+                            <button className="signin-button" type="submit">Iniciar Sesión</button>
                         </div>
                     </form>
                 </div>
@@ -97,7 +78,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
-
+        
     )
 }
-export default Login;
+export default connect(null,{RDX_LOGIN})(Login);

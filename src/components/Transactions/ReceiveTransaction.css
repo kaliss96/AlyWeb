@@ -1,109 +1,160 @@
-.container-flex-balance {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    /* //border: 2px solid black; */
-    width: 100%;
-    justify-content: space-between;
+.container-flex-receive {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cont-text-receive {
+  width: 100%;
+}
+
+.container-receive-money {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.description-receive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  padding: 10px;
+}
+
+.cont-text-bal {
+  width: 100%;
+}
+/**************************/
+.container-balance {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container-balance div {
+  padding: 10px;
+}
+
+.title-money-receive {
+  color: gray;
+  line-height: 18px;
+  float: left;
+}
+
+.content-receive {
+  color: #fecb2e;
+  line-height: 20px;
+  text-align: left;
+}
+
+.style-balance {
+  margin: 5px;
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.style-lineal {
+  color: "green";
+  size: 1;
+  width: "150";
+}
+
+.img-container-receive {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.img-receive {
+  float: left;
+  width: 12%;
+}
+
+.icon-receive {
+  float: left;
+  width: 20%;
+}
+
+.img-label-receive {
+  color: #fecb2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.address-wallet-receive {
+  margin: 0.5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(134, 134, 134);
+}
+
+.wallet-receive {
+  color: #fecb2e;
+  font-size: 80%;
+}
+
+.title-receive-money {
+  color: white;
+  font-size: 1.4rem;
+  margin-left: 1.1rem;
+}
+
+/************************************************************/
+.btn-send {
+  padding-top: 1rem;
+}
+
+.cont-text-bal {
+  width: 100%;
+  margin-top: 1.4rem;
+}
+
+.recharge-wallet {
+  color: rgb(134, 134, 134);
+  margin-left: 1.1rem;
+  margin-top: 3.4rem;
+}
+
+.title-wallet {
+  color: #fecb2e;
+  font-size: 80%;
+}
+
+.title-recharge {
+  color: white;
+  font-size: 1.4rem;
+  margin-left: 1.1rem;
+}
+
+.title-size-money {
+  color: #fecb2e;
+  font-size: 80%;
+  /* margin-top: 2rem; */
+}
+
+.input-cant {
+  width: 30%;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1192px) {
+  .cont-mark-bal {
+    display: none;
   }
 
-  .cont-text-bal {
-    width: 100%;
+  .address-wallet-receive {
+    display: none;
   }
-
-  .container-flex-balance-text {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    /* //border: 2px solid black; */
-  }
-  
-  .description-receive {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-    padding: 10px;
-    /* flex-grow: 1; */
-  }
- 
- .cont-text-bal {
-    width: 100%;
-  }
-  /**************************/
-  .container-balance {
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .container-balance div{
-    padding: 10px;
-  }
-  
-  .text-title-balance {
-    color: gray;
-    line-height: 18px;
-    float: left;
-  }
-  
-  .text-content-balance {
-    color:#fecb2e;
-    line-height: 20px;
-    text-align: left;
-  }
-  
-  .style-balance {
-    margin: 5px;
-    font-size: 2em;
-    text-align: center;
-    flex-grow: 1;
-  }
-  
-  .style-lineal {
-    color: "green";
-    size: 1;
-    width: "150";
-  }
-
-  .img-container{
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .img-receive {
-    float: left;
-    width: 25%;
-  }
-
-  .img-label-receive {
-      color: #fecb2e;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  }
-
-  .address-wallet{
-      margin: 0.5rem auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: rgb(134, 134, 134);
-      height: 120px;
-  }
-
-  .title-wallet{
-      color: #fecb2e;
-      font-size: 80%;
-  }
-
-  .title-receive{
-      color: white;
-      font-size: 1.4rem;
-      margin-left: 1.1rem;
-  }
+}
