@@ -1,0 +1,17 @@
+export const LOAD_USER = "LOAD_USER";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGOUT = "LOGOUT";
+export const LOGIN_SUCCESS = "LOGIN_SUCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
+export const REGISTER_FAIL = 'REGISTER_FAIL'
+export const NOTIFICATION = 'NOTIFICATION'
+export const SHOWLOGO = 'SHOWLOGO'
+export const HIDELOGO = 'HIDELOGO'
+export const GET_WALLETS =  'GET_WALLETS'
+export const GET_STATE_COMP =  'GET_STATE_COMP'
+export const DETAILS_WALLETS = 'DETAILS_WALLETS'
+export const HISTORY_BYID = 'HISTORY_BYID'
+export const SESION_EXPIRED = 'SESION_EXPIRED'
+export const GET_SEARCH_TEXT = 'GET_SEARCH_TEXT'
+export const VERIFY_WALLET = 'VERIFY_WALLET'

@@ -1,0 +1,37 @@
+$border-radius-round: 5px;
+
+.search-bar {
+  position: relative;
+  border: 1px solid $line-gray;
+  background-color: $field-background;
+  border-radius: $border-radius-round;
+  color: lighten(yellow, 50);
+  font-size: 1rem;
+  transition: border-color 0.25s, background-color 0.25s;
+  width: 500px;
+  margin-left:180px!important;
+  &:focus-within {
+    background-color: lighten($field-background, 10);
+    border-color: $line-gray;
+  }
+  .search-bar__input {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    &:placeholder {
+      color: yellow;
+      opacity: 1;
+    }
+  }
+}
+.search-bar__icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffcb08;
+}

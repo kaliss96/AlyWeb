@@ -1,0 +1,116 @@
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+  display: table;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  font: normal 28px Arial;
+  margin: 0 auto;
+  margin-top: 2%;
+  border-collapse: collapse;
+  text-align: center;
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+  th {
+    padding: 2.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  td {
+    padding: 2.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+table.table {
+  thead {
+    th {
+      border-top: 0;
+    }
+  }
+  th {
+    padding-top: 0.1rem;
+    padding-bottom: 1rem;
+  }
+  td {
+    padding-top: 1.1rem;
+    padding-bottom: 0rem;
+
+  }
+}
+table {
+  th {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $colorYellow;
+  }
+}
+td {
+  color: $field-color;
+  font: normal 17px Arial;
+}
+th {
+  text-align: inherit;
+  height: 35px;
+  border-bottom: 1px solid rgb(210, 220, 250);
+}
+
+/*******************************************************************************/
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    caption {
+      font-size: 1.3em;
+    }
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      display: block;
+      margin-bottom: 0.625em;
+    }
+    td {
+      display: block;
+      font-size: 0.8em;
+      text-align: right;
+      &::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

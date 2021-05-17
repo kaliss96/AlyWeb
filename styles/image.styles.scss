@@ -1,0 +1,37 @@
+.responsive_img {
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.container_img_foot {
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.responsive_img_foot {
+  margin: 10px auto;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-fondos {
+  margin: 5px;
+  font-size: 2em;
+  text-align: center;
+  flex-grow: 3;
+}
+
+.img_dash {
+  float: left;
+  padding-right: 10px;
+  width: 20%;
+}
+
+.coin__styles {
+  height: 75px;
+}
