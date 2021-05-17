@@ -7,7 +7,10 @@ const key = 'e8f0cd0cceab438eb287d9a4b1b4596a'
  * @return {String}
  * */
 function encodeToken(text) {
-    return CryptoJS.AES.encrypt(text, key).toString()
+    if(text){
+        return CryptoJS.AES.encrypt(text, key).toString()
+    }
+    
 }
 /**
  * Decode a encode token by salt secret key
@@ -15,6 +18,9 @@ function encodeToken(text) {
  * @return {String}
  * */
 function decodeToken(text) {
-    return CryptoJS.AES.decrypt(text, key).toString(CryptoJS.enc.Utf8)
+    if(text){
+        return CryptoJS.AES.decrypt(text, key).toString(CryptoJS.enc.Utf8)
+    }
+    
 }
 export { encodeToken, decodeToken }

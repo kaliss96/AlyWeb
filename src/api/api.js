@@ -1,13 +1,20 @@
 import http from './http'
-const axios = http.getHtpp()
-const sesion = http.getSesion()
+import {getAuth} from './verifyToken'
 
-export default {
-    auth: {
-        signin: credentials =>
-            sesion.post('/login',  credentials ).then(res => res.data),
-        signup: data =>
-            axios.post('/register', { data }).then(res => res.data),
-       
-    },
+export const auth = {
+    signin: credentials =>
+        http.post('/login',  credentials ).then(res => res.data),
+    signup: data =>
+        http.post('/register', data ).then(res => res.data),
+}
+
+export const wallets = {
+    getWallets: () => 
+        http.get('/wallets', {headers: { ...getAuth()} }).then(res => res.data),
+    
+    details: id => 
+        http.get(`/wallets/details/${id}`, { headers: { ...getAuth()} }).then(res => res.data),
+		
+	verifyWallet: id => 
+        http.get(`/wallets/verify/${id}`, { headers: { ...getAuth()} }).then(res => res.data)
 }
