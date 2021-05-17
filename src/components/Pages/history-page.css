@@ -1,0 +1,95 @@
+/******************** Seccion de wallet resp ***************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+  .btn-conf-wall {
+    display: none;
+  }
+
+  .container-history {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+  }
+
+  .cont-search-rps {
+    display: flex;
+  }
+
+  .txt-trans {
+    color: #fecb2e;
+  }
+
+  .txt-hash {
+    color: #fecb2e;
+  }
+
+  .container-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+  }
+
+  .txt-box-right {
+    color: #fecb2e;
+  }
+
+  .txt-box-left {
+    color: #fecb2e;
+  }
+
+  .spn-white {
+    color: whitesmoke;
+  }
+
+  .spn-gray {
+    color: grey;
+  }
+
+  .spn-red {
+    color: red;
+  }
+
+  .search-bar-hist {
+    display: flex;
+    border: 1px solid #5a5353;
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.25s, background-color 0.25s;
+    width: 22em;
+  }
+
+  .search-rps-bar__icon {
+    background-color: #ffc107;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    margin-left: 0.5em;
+    top: 5em;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+  .search-rps-bar__input {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .search-rps-bar__input::placeholder {
+    color: #ffcb08;
+    opacity: 1;
+  }
+  .title-1 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-rps-bar__icon {
+    display: none;
+  }
+}

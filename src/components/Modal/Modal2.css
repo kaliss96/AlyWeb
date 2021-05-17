@@ -1,0 +1,86 @@
+.modal2 {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color:#0000008f;
+  z-index: 1; /* Overlay effect: positioned over other containers */
+  width: 100%; /* Full width */
+  height: 950px; /* Full height */
+  position: fixed; /* Fix position on the top-left corner*/
+  top: 0;
+  left: 0;
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 80px; /* Location of the content container */
+}
+
+.modal-contenido {
+  padding: 10px 20px;
+  margin: 8% auto;
+  display: flex;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  color: rgb(224, 194, 22);
+  text-align: center;
+}
+
+.mymodal-cnt-bck {
+  background-color: #151515;
+  width: 22%; /* Width in proportion to its parent container*/
+  height: 30%; /* Height in proportion to its parent container */
+  margin: auto; /* Auto margin according to the element width */
+  padding: 10px;
+  border: 1px solid #ffc107;
+  border-radius: 2px; /* Optional. Rounds container corners */
+}
+
+#miModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.confirm-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.button{
+	background-image: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  color: rgba(0,0,0,.85);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  height: 32px;
+  line-height: 1.5715;
+  padding: 4px 15px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.confirm-button {
+  border-radius: 22px;
+  display: block;
+  letter-spacing: 0.5px;
+  padding: 5px;
+  font-size: 0.9em;
+  background-color: transparent;
+  background-color: #feca2eb7;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  width: 5rem;
+}

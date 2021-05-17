@@ -1,147 +1,234 @@
 .sign-in-wrapper{
-    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.75)), url('../../assets/back-login.png');
-    background-size: cover;
-    min-width: 100vw;
-    min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0, 0.83), rgba(0,0,0,.75)), url('../../assets/back-login.png');
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .sign-in {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    width: 30vw;
-    min-width: 300px;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 30vw;
+  min-width: 300px;
+  min-height: 100vh;
 }
 
 .containerInputs {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    border: 3px solid yellow;
-    border-radius: 10px;
-    padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 25px 25px;
+  flex-grow: 1;
 }
 
 .responsive_img_logo {
-    max-width: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 85%; */
 /* //height: 50px; */
 }
 
 .container_img_foot {
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 .responsive_img_foot {
-    margin: 2rem auto;
-    max-width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin: 2rem auto;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .label-form {
-    color: #fecb2e;
-    margin: 15px auto;
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
+  color: #fecb2e;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
 }
-  
+
 .label-field{
-    color: #fecb2e;
+  color: #fecb2e;
 }
 
 .form-input-login {
-    background: none;
-    background-color: black;
-    color: #b9b7b7;
-    font-size: 18px;
-    margin: 5px 0;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    border-bottom: 1px solid #fff;
-    border: 2px solid #b9b7b7;
-    padding: 10px;
+  background: none;
+  background-color: #000;
+  color: #707070;
+  font-size: 18px;
+  margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid #fff;
+  border: 1px solid #707070;
+  padding: 5px 5px;
 }
 
 .form-input-login:focus{
-    outline: none;
+  outline: none;
 }
 
 .button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .signup-button {
-    display: block;
-    letter-spacing: 0.5px;
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: transparent;
-    color:  #feca2eb7;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
+  display: block;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: transparent;
+  color:  #feca2eb7;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .signup-button:focus {
-    outline: none;
+  outline: none;
 }
-
-.signup-button:hover {
-    border-radius: 10px;
-    background-color: #feca2eb7;
-    color: black;
-    font-weight: 600;
-}
-  
 
 .signin-button {
-    display: block;
-    letter-spacing: 0.5px;
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: transparent;
-    color:  #feca2eb7;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
+  border-radius: 22px;
+  display: block;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: transparent;
+  background-color: #feca2eb7;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .signin-button:focus {
-    outline: none;
+  outline: none;
 }
 
-.signin-button:hover {
-    border-radius: 10px;
-    background-color: #feca2eb7;
-    color: black;
-    font-weight: 500;
+.signin-button:hover not(:disabled) {
+  border-radius: 22px;
+  background-color: #feca2eb7;
+  color: black;
+  font-weight: 500;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #a08f5cb7;
 }
 
 @media only screen and (max-width: 600px) {
-    .button-container {
-      flex-direction: column;
-      
-    }
+  .button-container {
+    flex-direction: column;
   }
+}
 
   @media only screen and (max-width: 992px) {
     .button-container {
       flex-direction: column;
-      
     }
   }
+  
+  @keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+  .spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}
+.alert{  border: 1px solid rgb(238,211,215);
+  background-color: #b7ab88b7;
+	display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 3px;
+	color:red;
+  border: 1px solid rgb(180,180,180);
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  margin-left: 50%;
+
+}
+.lds-ellipsis-out {
+  display: none;
+ content:"";
+
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+align-items: center;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

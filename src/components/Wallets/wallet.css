@@ -1,12 +1,32 @@
-.sect-wallet {
-  background-color: black;
+.container-wallet{
+  margin: auto 0.75rem;
+  padding: 0.75rem auto;
+}
+
+.section-wallet {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+  height: 110px;
+  cursor: pointer;
+}
+
+.content-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-rigth{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .img_wallets {
-  width: 8rem;
+  width: 4rem;
+  border-radius: 5rem;
 }
 
 .text-white {
@@ -14,24 +34,25 @@
 }
 
 .tittle-aly {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .letters-aly-wallet {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .letters-aly {
   color: gray;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .letters-balance-wallet {
-  margin-top: 2rem;
+  margin-top: .5rem;
 }
 
 .letters-balance {
   color: gray;
+  font-size: 13px;
 }
 
 .color-bold {
@@ -46,10 +67,22 @@
   background-color: black;
 }
 
+.content-img-wallet{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 1;
+  width: 10%;
+}
+
+.component__content {
+  border: 2px solid yellow;
+}
+
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 360px) and (max-width: 1192px) {
+@media screen and (min-width: 360px) and (max-width: 1199px) {
   .img_wallets {
+    border-radius: 5rem;
     width: 3rem;
-    padding-top: 2rem;
   }
 }

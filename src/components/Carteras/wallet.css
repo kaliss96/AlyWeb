@@ -1,0 +1,55 @@
+.sect-wallet {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img_wallets {
+  width: 8rem;
+}
+
+.text-white {
+  color: aliceblue;
+}
+
+.tittle-aly {
+  font-size: 25px;
+}
+
+.letters-aly-wallet {
+  margin-top: 3rem;
+}
+
+.letters-aly {
+  color: gray;
+  font-size: 15px;
+}
+
+.letters-balance-wallet {
+  margin-top: 2rem;
+}
+
+.letters-balance {
+  color: gray;
+}
+
+.color-bold {
+  color: #fecb2e;
+}
+
+.box-wall {
+  color: black;
+}
+
+.print {
+  background-color: black;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1192px) {
+  .img_wallets {
+    width: 3rem;
+    padding-top: 2rem;
+  }
+}

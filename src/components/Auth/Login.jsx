@@ -1,26 +1,32 @@
-import React from 'react';
+import React  from 'react';
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import InputPassword from '../InputForm/InputPassword';
-import { RDX_LOGIN } from '../../redux/actions/auth'
+import { redux_login,loadSpin } from '../../redux/actions/auth'
 
 import img_logo from '../../assets/img_AlyPay.png';
 import foot_logo from '../../assets/foot_alySystem.svg';
 import './Login.css'
 
-const Login = ({RDX_LOGIN,...others}) => {
-    const { register, errors, handleSubmit } = useForm();
+const Login = ({redux_login,loadSpin,msg,isLoading, history}) => {
     
-    const handleOnSubmit = (data, e) => {
+    const { register, errors, handleSubmit } = useForm();
+
+	const handleOnSubmit = (data, e) => {
         e.preventDefault()
-        RDX_LOGIN(data)
-		
-		others.history.push("/Dashboard");
-        window.location.reload();
+        loadSpin(true);
+        redux_login(data)
+        history.push("/dashboard");
+    }
+	
+	const handlechange = (e) => {
+        loadSpin(false);
+        e.preventDefault()
     }
 
     return (
+
         <div className='sign-in-wrapper'>
             <div className='sign-in'>
                 <div className="containerInputs">
@@ -37,14 +43,19 @@ const Login = ({RDX_LOGIN,...others}) => {
                                     className="form-input-login"
                                     name="email"
                                     id="email"
-                                    ref={register({ required: true, max: 10 })}
-                                    placeholder="Ingrese correo aqui"
+									onChange={handlechange}
+                                    ref={register({ required: { value: true, message: "Email es requerido" },
+                                   pattern: {value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+									message: "Correo con Formato Incorrecto"
+								  }
+								})}
+                                    placeholder="Ingrese email aquí"
                                     autoComplete="off"
                                 />
 
                                 {errors.email && (
                                     <label className="error-label">
-                                    Correo es requerido
+                                    {errors.email.message}
                                     </label>
                                 )}
                             </div>
@@ -53,21 +64,29 @@ const Login = ({RDX_LOGIN,...others}) => {
                         <InputPassword
                             title='Contraseña'
                             name="password"
+							placeholder=""
                             reference={register({
-                                required: "You must specify a password",
+                                required: "Contraseña requerida",
                                 minLength: {
                                     value: 6,
-                                    message: "Password must have at least 8 characters"
+                                    message: "Su contraseña debera ser mayor de 5 caracteres"
                                 }
                             })}
-                            errors={errors}
+							change_event={handlechange}
+                            errors={errors.password}
                         />
                         
                         <div className="button-container">
                             <Link className='signup-button' to='/register'>
-                            Registrarme
+                                REGISTRARSE
                             </Link>
-                            <button className="signin-button" type="submit">Iniciar Sesión</button>
+							
+                            <button disabled={isLoading} className="signin-button" type="submit">INICIAR SESIÓN</button>
+                       
+						</div>
+						 <div className={`${isLoading === true?  'lds-ellipsis':'lds-ellipsis-out'}`} ><div></div><div></div><div></div><div></div></div>
+						  <div className={`${msg !=null?  'alert':'lds-ellipsis-out'}`} >
+                         {msg}
                         </div>
                     </form>
                 </div>
@@ -77,8 +96,16 @@ const Login = ({RDX_LOGIN,...others}) => {
                     </div>
                 </div>
             </div>
-        </div>
-        
+		</div>
     )
 }
-export default connect(null,{RDX_LOGIN})(Login);
+
+
+
+const mapStateToProps = state => ({
+    msg: state.auth.msg,
+    isLoading: state.auth.isLoading,
+     
+});
+
+export default connect(mapStateToProps,{redux_login,loadSpin})(Login);

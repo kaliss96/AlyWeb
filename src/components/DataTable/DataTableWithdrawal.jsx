@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import randomKey from "../../utils/randomKeys";
 import "./tablestylewithdrawal.css";
 /**
@@ -21,7 +21,7 @@ const DataTable = (props) => {
   const selectable = props.selectable || false;
 
   const selectRow = (row) => {
-	  console.log(row)
+	  // console.log(row)
   };
 
   return (

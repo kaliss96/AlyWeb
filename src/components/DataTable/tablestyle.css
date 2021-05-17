@@ -11,6 +11,10 @@
   border-collapse: collapse;
 }
 
+.table-component__content4 {
+  display:none;
+}
+
 tr.table-component__content--row td,
 tr.table-component__content--row th {
   padding: 0.5rem;

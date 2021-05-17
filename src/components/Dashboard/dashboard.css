@@ -1,14 +1,3 @@
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 360px) and (max-width: 1192px) {
-  .wallet {
-    display: none;
-  }
-
-  .transaction {
-    display: block;
-  }
-}
-
 .row {
   display: flex;
   flex-direction: row;
@@ -91,26 +80,12 @@
   padding-left: 15px;
 }
 
-.col-4 {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-}
-
-.col-7 {
-  flex: 0 0 58.333333%;
-  max-width: 58.333333%;
-}
-
 .wallet-border {
-  /* border: 3px solid rgba(219, 241, 139, 0.2); */
   border-radius: 4px;
-  /* height: 600px; */
 }
 
 .section-border {
-  /* border: 3px solid rgba(170, 212, 17, 0.589); */
   border-radius: 6px;
-  /* height: 600px; */
 }
 
 .mt-3 {
@@ -119,4 +94,39 @@
 
 .bg-gray {
   background-color: rgb(29, 28, 28);
+}
+
+/******************** Seccion de wallet resp ***************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+  .col-dash {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-wall {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rps-navb {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .col-dash {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+
+  .col-wall {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .rps-navb {
+    display: block;
+  }
 }

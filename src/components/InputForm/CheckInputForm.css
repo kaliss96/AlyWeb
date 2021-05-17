@@ -27,23 +27,52 @@
   margin-left: 0;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #fecb2e;
+  cursor: pointer;
+  appearance: none;
+  margin: 1rem;
+  padding: 0.375rem;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fecb2e;
+}
+
 .btn {
   display: block;
   letter-spacing: 0.5px;
   padding: 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   background-color: #fecb2e;
   color: #000;
   border: none;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 22px;
 }
 
 .btn-block {
   display: block;
   width: 100%;
+}
+
+.btn-block-rg {
+  display: flex;
+  width: 50%;
+}
+
+.ctn-back-rg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .my-2 {
@@ -57,10 +86,14 @@
 .btn:hover {
   background-color: #fecb2e;
   color: black;
-  border-radius: 10px;
+  border-radius: 22px;
   font-weight: 500;
 }
 
-.terms-cond {
+.accept {
   color: white;
+}
+
+.terms-cond {
+  text-decoration-line: underline;
 }

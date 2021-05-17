@@ -12,19 +12,19 @@ export default function RechargeWallet() {
             </div>
             <div className="cont-bills">
                 <div className="recharge-bills-one">
-                  <label type="text" className="tittle-wallet">
-                    Direccion de la billetera
-                  </label>
-                  <div className="group-addresses">
-                    <input
-                      type="text"
-                      className="form-input"
-                      name="username"
-                      id="username"
-                      placeholder="YCaBUbg3bCKxxWMkV0iRz7EbsFJf"
-                      autoComplete="off"
-                    />
-                  </div>
+                    <label type="text" className="tittle-wallet">
+                        Direccion de la billetera
+                    </label>
+                    <div className="group-addresses">
+                        <input
+                            type="text"
+                            className="form-input"
+                            name="username"
+                            id="username"
+                            placeholder="YCaBUbg3bCKxxWMkV0iRz7EbsFJf"
+                            autoComplete="off"
+                        />
+                    </div>
                 </div>
                 <div className="recharge-bills-twoo"></div>
             </div>

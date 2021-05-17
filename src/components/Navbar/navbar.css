@@ -1,0 +1,122 @@
+.navbar {
+    height: 100%;
+    padding: 10px 0;
+}
+
+.navbar__search-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    align-items: flex-end;
+    border-radius: 50px;
+    border: 1px solid #ffcb08;
+    width: 150px;
+}
+
+.navbar__search-button:active {
+    transform: scale(0.95);
+}
+
+.navbar__container {
+    border-radius: 20px;
+    height: inherit;
+    background-color: rgba(#000000);
+    display: flex;
+    /* justify-items: center; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar__brand {
+    width: 200px;
+}
+
+.navbar__options {
+    display: flex;
+    margin-left:70px;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid #ffcb08;
+    padding: 1px;
+    width:245px;
+}
+
+.navbar__item {
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 0.35rem 1.25rem;
+    border-radius: 50px;
+    transition: color 0.25s, background-color 0.25s;
+    cursor: pointer;
+    width: 225px;
+}
+
+.navbar__item:hover {
+    color: darken(#ffcb08, 10);
+}
+
+.navbar__item:active {
+    background-color: #ffcb08;
+    color: black;
+}
+
+.navbar__container--user {
+    background: black;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border: 1px solid #ffcb08;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar {
+    position: relative;
+    border: 1px solid #5a5353;
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    color: lighten(#ffcb08, 50);
+    font-size: 1rem;
+    transition: border-color 0.25s, background-color 0.25s;
+    width: 500px;
+    margin-left:180px!important;
+}
+
+.search-bar:focus-within {
+    background-color: lighten(#1d1d1d, 10);
+    border-color: #1d1d1d;
+}
+
+.search-bar__input {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+}
+
+.search-bar__input::placeholder {
+    color: #ffcb08;
+    opacity: 1;
+}
+
+.search-bar__icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ffcb08;
+}

@@ -16,6 +16,9 @@ export default function AlyCoins() {
                 
                 <div className="contenido-item">
                     <div className="lado-izquierdo">
+                        <p className="tittle-left-coin">Alycoin</p>
+                        <p className="cont-left-coin">Precio del mercado</p>
+                        <p className="money-left-coin">$ 1.00</p>
                     </div>
                     <div className="lado-derecho">
                     </div>

@@ -1,15 +1,14 @@
-import React, { useState }  from "react"
+import React from "react"
 import './PostalCode.css';
 import { countryList } from '../../data/country.util';
 
 const PostalCode = ({errors={},handleChange, label, type, ...other}) => {
-    
 
     return (
         <div className="form-row" id='postalcode'>
             <div className="form-group postal">
                 <label className="prefijo-label" type="text">
-                    Cod. Postal
+                    Cód. Postal
                 </label>
                 <div className='group'>
                     <input
@@ -30,11 +29,11 @@ const PostalCode = ({errors={},handleChange, label, type, ...other}) => {
             
             <div className="form-group pais">
                 <label className="prefijo-label">
-                    Pais
+                    País
                 </label>
                 <div className="group">
                     <select id="pais" className="form-input text-center" onChange={handleChange} name="pais">
-                        <option selected>Seleccione Pais...</option>
+                        <option selected>Seleccione País...</option>
                         {countryList.map((item, index) => {
                         return <option key={`op${index}`}
                         data-phonecode={item.phonecode }

@@ -6,14 +6,15 @@
 
 .title-1 {
   color: aliceblue;
-  margin: 1.2rem 1.8rem;
+  margin: 1.2rem 0.8rem;
   font-size: 1.5rem;
 }
+
 .section-main {
   /* background-color: #fff; */
   box-sizing: border-box;
   overflow: hidden;
-  margin: 0.5rem auto;
+  margin: 1.5rem auto;
 }
 
 .tabs {
@@ -79,4 +80,190 @@ span.section-tags {
 #tres:target ~ #pnl_3 > div {
   opacity: 1;
   transition: all 1s ease;
+}
+
+/******************** Seccion de wallet resp ***************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 483px) and (max-width: 1199px) {
+  .color-bold-rps {
+    color: #fecb2e;
+  }
+
+  .color-bold-rps {
+    color: #fecb2e;
+  }
+
+  .img_wallets-resp {
+    border-radius: 5rem;
+    width: 6rem;
+    /* padding-top: 2rem; */
+  }
+
+  .letters-aly-wallet-rps {
+    margin-top: 3rem;
+  }
+
+  .letters-balance-wallet-rps {
+    margin-top: 2rem;
+  }
+
+  .letters-balance-rps {
+    color: gray;
+  }
+
+  .letters-aly-rps {
+    color: gray;
+    font-size: 15px;
+  }
+
+  .sect-wallet-resp {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: black;
+    border-radius: 12px;
+  }
+
+  .content-left {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-center {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-rigth {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tittle-aly-rps {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sect-wallet-resp {
+    display: none;
+  }
+}
+
+/******************** Seccion de wallet resp ***************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+  .caption {
+    font-size: 12px;
+  }
+
+  .precio-mercado {
+    font-size: 12px;
+    visibility: hidden;
+  }
+
+  .precio-mercado:before {
+    content: "Precio";
+    visibility: visible;
+  }
+
+  .color-bold-rps {
+    color: #fecb2e;
+  }
+
+  .color-bold-rps {
+    color: #fecb2e;
+  }
+
+  .img_wallets-resp {
+    border-radius: 5rem;
+    width: 4rem;
+    /* padding-top: 2rem; */
+  }
+
+  .letters-aly-wallet-rps {
+    margin-top: 3rem;
+  }
+
+  .letters-balance-wallet-rps {
+    margin-top: 2rem;
+  }
+
+  .letters-balance-rps {
+    color: gray;
+  }
+
+  .letters-aly-rps {
+    color: gray;
+    font-size: 15px;
+  }
+
+  .sect-wallet-resp {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: black;
+    border-radius: 12px;
+  }
+
+  .content-left {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-center {
+    margin-left: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .content-rigth {
+    margin-left: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tittle-aly-rps {
+    font-size: 18px;
+  }
+
+  .rps-history {
+    background-color: black;
+    border-radius: 12px;
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .rps-tra {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sect-wallet-resp {
+    display: none;
+  }
+
+  .rps-history {
+    display: none;
+  }
+
+  .rps-tra {
+    display: block;
+  }
 }

@@ -1,27 +1,34 @@
 import React, { Fragment } from "react";
 import "./wallet.css";
 import img_wallets from '../../assets/alyCoin.png';
-import Pagination from "../Transactions/Pagination";
+import { connect } from 'react-redux';
+import { loadStateComp, redux_details_wallets } from '../../redux/actions/wallet'
 
-const SectionWallet = () => {
+const SectionWallet = ({wallet, loadStateComp, statecomp, redux_details_wallets, currentWallet,wallet_verify}) => {
+
+  const handleOnClick = id =>{
+    loadStateComp(!statecomp)
+    console.log('id wallet seleccionada', id)
+    redux_details_wallets(id)
+  }
+
   return (
     <Fragment>
-      <h1 className="text-white">Billetera</h1>
-      <div className="col-1">
-        <div className="sect-wallet">
-          <div>
-            <img className='img_wallets' src={img_wallets} />
+      <div className={`container-wallet ${currentWallet === wallet.id ? 'component__content' : 'activater'}`} onClick={()=>handleOnClick(wallet.id)}>
+        <div className="section-wallet">
+          <div className="content-img-wallet">
+            <img  title={wallet_verify.city}  className='img_wallets' src={wallet._id === null ? img_wallets: wallet.img} alt="alycoin"/>
           </div>
-          <div>
-            <p className="tittle-aly color-bold">AlyCoin</p>
+          <div className="content-center">
+            <p className="tittle-aly color-bold">{wallet.description}</p>
             <p className="letters-aly-wallet letters-aly">Precio del mercado</p>
-            <p className="letters-aly color-bold">$ 1.00</p>
+            <p className="letters-aly color-bold">$ {Number.parseFloat(wallet.price).toFixed(2)}</p>
           </div>
-          <div>
+          <div className="content-rigth">
             <p className="letters-balance">Balance</p>
-            <p className="letters-balance color-bold">53,000.000 ALY</p>
-            <p className="letters-balance-wallet letters-balance">Balance USD</p>
-            <p className="letters-balance color-bold">$ 530,000.000</p>
+            <p className="letters-balance color-bold">53,000.000 {wallet.symbol}</p>
+            <p className="letters-balance-wallet letters-balance">Balance {wallet.symbol}</p>
+            <p className="letters-balance color-bold">{wallet.amount}</p>
           </div>
         </div>
       </div>
@@ -29,4 +36,9 @@ const SectionWallet = () => {
   );
 };
 
-export default SectionWallet;
+const mapStateToProps = state => ({
+  statecomp: state.wallets.statecomp,
+  currentWallet: state.wallets.currentWallet,
+  wallet_verify: state.wallets.wallet_verify
+});
+export default connect(mapStateToProps,{loadStateComp, redux_details_wallets})(SectionWallet);

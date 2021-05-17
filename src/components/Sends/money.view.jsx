@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import SendMoney from './send-money.view';
-import './money.css';
+import './money.scss';
 
 const Money = () => {
     return(

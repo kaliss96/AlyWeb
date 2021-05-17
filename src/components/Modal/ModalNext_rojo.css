@@ -1,0 +1,255 @@
+/* Background effect. It covers the entire site */
+.modal3 {
+     width: 100%; /* Full width */
+  height: 950px; /* Full height */
+  position: fixed; /* Fix position on the top-left corner*/
+  top: 0;
+  left: 0;
+  background-color:#0000008f;
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 80px; /* Location of the content container */
+}
+
+.dtl-trs {
+  color: #ffc107;
+  font-size: 25px;
+}
+
+.modal-flex {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.modal-info {
+  background-color: #888;
+  border: 1px solid #888;
+}
+
+/* Close button */
+.close {
+  color: #aaaaaa;
+  float: right; /* Positioned to the right of the parent container whichever size it is */
+  font-size: 25px;
+  font-weight: bold;
+}
+.modal-content {
+  padding: 30px 15px;
+  background-color: #fff;
+}
+
+.modal-content:p {
+  margin: 0;
+  color: #61686e;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mycard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  background-color: #151515;
+  margin: auto 1rem !important;
+}
+.mycard-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #fff;
+  color: rgb(224, 194, 22);
+  text-align: center;
+  font-family: Roboto, Arial, Helvetica, sans-serif !important;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.mycard-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+.mycard-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: #151515;
+  border-top: 1px solid white;
+}
+
+.content-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left-details {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.right-details {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.resume-transaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.amount {
+  color: white;
+  margin-left: 0.75rem;
+}
+
+/******************** Seccion de wallet resp ***************************/
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+  /* Modal content */
+  .modal-confirmation {
+    background-color: #fff;
+    width: 72%; /* Width in proportion to its parent container*/
+    height: 30%; /* Height in proportion to its parent container */
+    margin: auto; /* Auto margin according to the element width */
+    padding: 10px;
+  }
+  
+  .modal-header {
+    position: relative;
+    background: #fecb2e;
+    padding: 15px;
+    width: auto;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    background: #fecb2e;
+    padding: 15px;
+    width: 106.5%;
+    color: #fff;
+    text-align: left;
+    height: 57px;
+    left: -10px;
+    top: -10px;
+  }
+
+  .modal-header:h3 {
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .details-content {
+    color: white;
+    font-size: 0.95rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+  }
+
+  .details-tittle {
+    color: rgb(175, 174, 174);
+    font-size: 1rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Modal content */
+  .modal-confirmation {
+    background-color: #fff;
+    width: 22%; /* Width in proportion to its parent container*/
+    height: 30%; /* Height in proportion to its parent container */
+    margin: auto; /* Auto margin according to the element width */
+    padding: 10px;
+}
+
+  .modal-action {
+    float:right;
+    position:relative;
+    margin-top: -20px;
+  }	
+
+  .modal-header {
+    position: relative;
+    background: #fecb2e;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    background: #fecb2e;
+    padding: 15px;
+    width: 334px;
+    color: #fff;
+    text-align: left;
+    height: 57px;
+    left: -10px;
+    top: -10px;
+  }
+
+  .modal-header:h3 {
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .details-tittle {
+    color: rgb(175, 174, 174);
+    font-size: 1.2rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+  }
+
+  .details-content {
+    color: white;
+    font-size: 0.98rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+  }
+}
+
+.modal-buttons {
+  padding: 35px 15px 15px 25px;
+  text-align: right;
+}
+
+.modal-button-no {
+  border: 2px solid #98a1a9;
+  padding: 10px 30px;
+
+  color: #98a1a9;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.modal-button-no:hover {
+  background: #98a1a9;
+  color: #fff;
+}
+
+.modal-button-yes {
+  border: 2px solid #fecb2e;
+  padding: 10px 50px;
+  background: #fecb2e;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+  margin-left: 10px;
+}
+
+.modal-button-yes:hover {
+  border: 2px solid darken(#ff6b6b, 8%);
+  background: darken(#ff6b6b, 8%);
+}

@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import SectionWallet from './section-wallet.view';
 import './wallet.css'
+import {connect} from 'react-redux'
 
-const Wallet = () => {
+const Wallet = ({}) => {
     return(
         <Fragment>
             <SectionWallet />
@@ -10,4 +11,6 @@ const Wallet = () => {
     )
 }
 
-export default Wallet;
+const mapToStateToProps = state =>({})
+
+export default connect(mapToStateToProps,{})(Wallet);

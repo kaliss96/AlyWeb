@@ -30,14 +30,14 @@ const DataTable = (props) => {
   };
 
   const selectRow = (row) => {
-	console.log(row)
+
     selectModal(row);
   };
 
   return (
     <Fragment>
       {<section className="table-component">
-        <table className="table-component__content">
+        <table className={`table-component__content ${props.className}`}>
           <thead className="table-component__content--header">
             <tr className="table-component__content--row">
               {numerable ? <th>{numerableTitle}</th> : null}

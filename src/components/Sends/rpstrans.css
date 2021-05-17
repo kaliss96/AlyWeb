@@ -1,48 +1,22 @@
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 360px) and (max-width: 1192px) {
-  .description-send {
-    display: none;
-  }
-
-  .cod-qr {
-    display: none;
-  }
-
-  .cont-text-bal {
-    display: none;
-  }
-
-  .style-mont-money {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
-  .mont-aly {
-    width: 50%;
-  }
-
-  .cant-usd {
-    width: 50%;
-  }
-
+@media screen and (min-width: 360px) and (max-width: 1199px) {
   .btn-send {
     display: none;
   }
 
   .botonera-sends {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    font-size: 1rem;
+    width: 20rem;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .btn-send-resp {
     display: block;
     letter-spacing: 0.5px;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 0.7rem;
     background-color: transparent;
     color: #feca2eb7;
     border: none;
@@ -51,11 +25,62 @@
     text-align: center;
   }
 
+  .btn-send-resp:hover {
+    border-radius: 10px;
+    background-color: #feca2eb7;
+    color: black;
+    font-weight: 500;
+  }
+
+  .btn-ext-resp {
+    display: block;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    font-size: 0.7rem;
+    background-color: transparent;
+    color: #feca2eb7;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .btn-ext-resp:hover {
+    border-radius: 10px;
+    background-color: #feca2eb7;
+    color: black;
+    font-weight: 500;
+  }
+
   .btn-send:hover {
     border-radius: 10px;
     background-color: #feca2eb7;
     color: black;
     font-weight: 600;
+  }
+
+  .cod-qr {
+    /* display: none; */
+  }
+
+  .cont-text-bal-send {
+    display: none;
+  }
+
+  .cant-usd {
+    width: 45%;
+  }
+
+  .description-send {
+    display: none;
+  }
+
+  .mont-aly {
+    width: 45%;
+  }
+
+  .withdraw-funds-mobile {
+    color: red;
   }
 }
 
@@ -73,26 +98,47 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .cont-mark-bal {
+  .botonera-sends {
+    display: none;
+  }
+
+  .cod-qr {
+    /* border-radius: 100px; */
+    justify-content: center;
+    width: 11rem;
+    padding-top: 0.5rem;
+  }
+
+  .cont-text-bal-send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cont-mark-bal-send {
     width: 72%;
   }
 
-  .style-mont-money {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 2rem;
+  .cant-usd {
+    width: 35%;
   }
 
   .mont-aly {
-    width: 25%;
+    width: 35%;
   }
 
-  .cant-usd {
-    width: 25%;
-  }
-
-  .botonera-sends {
+  .rtr-funds-rsp {
     display: none;
+  }
+
+  .sect-img {
+    justify-content: center;
+    width: 8rem;
+    padding-top: 0.5rem;
+  }
+
+  .withdraw-funds-mobile {
+    color: blue;
   }
 }

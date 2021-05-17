@@ -8,14 +8,14 @@ import PhonePrefix from "../InputForm/PhonePrefix";
 import InputPassword from "../InputForm/InputPassword";
 import PostalCode from "../InputForm/PostalCode";
 import CheckInputForm from "../InputForm/CheckInputForm";
-
+import { connect } from 'react-redux'
+import { redux_regiter } from '../../redux/actions/auth'
 import './Register.css'
 
-const Register = () => {
-
+const Register = ({ }) => {
     const { register, errors, handleSubmit, watch } = useForm();
-    const onsubmit = (data) => {
-        console.log(data);
+    const handleOnSubmit = (data) => {
+        console.log("datos submit ",data)
     };
 
 	const [country, setCountry] = useState("");
@@ -37,8 +37,9 @@ const Register = () => {
     }
 
     const handleKeyPress=(event)=>{
-        if((event.charCode >=65 && event.charCode <=90)==true ||
-            (event.charCode >=97 && event.charCode <=122)==true)
+
+        if((event.charCode >=65 && event.charCode <=90)===true ||
+            (event.charCode >=97 && event.charCode <=122)===true)
             return true;
         else
             event.preventDefault();
@@ -53,7 +54,9 @@ const Register = () => {
     }
 
     const password = useRef({});
-    password.current = watch("password", "");
+    const confirmpassword = useRef({});
+    password.current = watch("password");
+    confirmpassword.current = watch("confirmpassword");
 
     return (
         <Fragment>
@@ -63,7 +66,7 @@ const Register = () => {
                     <label className="label-form" type="text">
                         Registro de usuario
                     </label>
-                    <form className="rowed my-5 mx-5 px-3 py-3" onSubmit={handleSubmit(onsubmit)}>
+                    <form className="rowed my-5 mx-5 px-3 py-3" onSubmit={handleSubmit(handleOnSubmit)}>
                         <div className="col-12 col-md-6">
                             <InputFormText
                                 pattern="[A-Za-z]+"
@@ -75,11 +78,11 @@ const Register = () => {
                                     required: { value: true, message: "Nombre es requerido" },
                                     maxLength: {
                                         value: 20,
-                                        message: "Cantidad Maxima de Caracteres Superada",
+                                        message: "Cantidad Máxima de Caracteres Superada",
                                     },
                                 })}
                                 placeholder={'Ingrese su nombre'}
-                                errors={errors}
+                                errors={errors.nombre}
                             />
                         </div>
 
@@ -92,10 +95,10 @@ const Register = () => {
                                 keypress={handleKeyPress}
                                 reference={register({
                                     required: { value: true, message: "Apellido es requerido" },
-                                    maxLength: { value: 20, message: "Cantidad Maxima de Caracteres Superada" },
+                                    maxLength: { value: 20, message: "Cantidad Máxima de Caracteres Superada" },
                                 })}
-                                placeholder={'Ingrese su Apellido'}
-                                errors={errors}
+                                placeholder={'Ingrese su apellido'}
+                                errors={errors.apellido}
                             />
                         </div>
 
@@ -107,7 +110,7 @@ const Register = () => {
                                     className="colordate"
                                     name="birthday"
                                     reference={register({ required: true })}
-                                    errors={errors}
+                                    errors={errors.birthday}
                                 />
                             </div>
                         </div>
@@ -115,27 +118,37 @@ const Register = () => {
                         <div className="col-12 col-md-6">
                             <PhonePrefix handleNumber={handleOnlyNumbers} country={country}/>
                         </div>
-
+                        
                         <div className="col-12 col-md-6">
                             <InputFormText
-                                title='Nombre de usuario'
-                                type="text"
-                                name="username"
-                                reference={register({ required: true, max: 10 })}
-                                errors={errors}
-                                placeholder="Ingrese su nombre de Usuario"
-
+                                pattern="[A-Za-z]+"
+                                type='text'
+                                name={'nombreu'}
+                                title={'Nombre de usuario'}
+								keypress={handleKeyPress}
+                                reference={register({
+                                    required: { value: true, message: "Nombre de usuario es requerido" },
+                                    maxLength: {
+                                        value: 20,
+                                        message: "Cantidad Máxima de Caracteres Superada",
+                                    },
+                                })}
+                                placeholder={'Ingrese su nombre de usuario'}
+                                errors={errors.nombreu}
                             />
                         </div>
 
                         <div className="col-12 col-md-6">
                             <InputFormText
-                                title='Correo Electronico'
-                                type="email"
+                                title='Correo Electrónico'
                                 name="email"
-                                reference={register({ required: true, max: 10 })}
-                                errors={errors}
-                                placeholder="Ingrese su correo aqui"
+                                placeholder={'Ingrese su correo electrónico'}
+                                reference={register({ required: { value: true, message: "Email es requerido" },
+                                pattern: {value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                message: "Correo con Formato Incorrecto"
+                                }
+								})}
+                                errors={errors.email}
                             />
                         </div>
 
@@ -144,15 +157,15 @@ const Register = () => {
                                 title='Contraseña'
                                 name="password"
                                 reference={register(
-								{   required: "You must specify a password",
+								{   required: "Contraseña es requerida",
                                     minLength: {
-                                        value: 8,
-                                        message: "Password must have at least 8 characters"
+                                        value: 5,
+                                        message: "Su contraseña debera ser mayor de 5 caracteres"
                                     },validate: value =>
-                                   value === password.current || "Las contraseñas no coinciden"
+                                    value === confirmpassword.current || "La contraseña no coincide"
                                 }
 								)}
-                                errors={errors}
+                                errors={errors.password}
                             />
                         </div>
 
@@ -162,24 +175,24 @@ const Register = () => {
                                 name="confirmpassword"
                                 id="confirmpassword"
                                 reference={register({
-                                    required: "Tu deberias especificar tu contraseña",
+                                    required: "Debe especificar confirmacion de contraseña",
                                     minLength: {
-                                        value: 8,
-                                        message: "Password must have at least 8 characters"
+                                        value: 5,
+                                        message: "Su contraseña debera ser mayor de 5 caracteres"
                                     },
                                     validate: value =>
                                         value === password.current || "La contraseña no coincide"
                                 })}
-                                errors={errors}
+                                errors={errors.confirmpassword}
                             />
                         </div>
 
                         <div className="col-12 col-md-6">
-                           <PostalCode handleChange={countryChange}/>
+                            <PostalCode handleChange={countryChange}/>
                         </div>
 
                         <div className="col-12 col-md-6">
-                           <CheckInputForm/>
+                            <CheckInputForm/>
                         </div>
                     </form>
                 </div>
@@ -192,4 +205,4 @@ const Register = () => {
         </Fragment>
     );
 };
-export default Register;
+export default connect(null, {redux_regiter})(Register); 

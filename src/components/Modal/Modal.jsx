@@ -19,7 +19,7 @@ const Modal = ({ modalInfo, displayModal, closeModal }) => {
           <div className="content-details">
             <div className="left-details">
               <div>
-                <h5 className="details-tittle" style={myStyle}>Descripcion</h5>
+                <h5 className="details-tittle" style={myStyle}>Descripción</h5>
                 <p className="details-content">{modalInfo?.descripcion ? modalInfo.descripcion : null}</p>
               </div>
               <div>
@@ -27,7 +27,7 @@ const Modal = ({ modalInfo, displayModal, closeModal }) => {
                 <p className="details-content">{modalInfo?.fecha ? modalInfo.fecha : null}</p>
               </div>
               <div>
-                <h5 className="details-tittle" style={myStyle}> Monto de Transaccion</h5>
+                <h5 className="details-tittle" style={myStyle}> Monto de Transacción</h5>
                 <div className="details-content">{modalInfo?.monto ? modalInfo.monto : null}</div>
               </div>
               <div>
@@ -76,7 +76,6 @@ const Modal = ({ modalInfo, displayModal, closeModal }) => {
   return (
     <div className="modal" onClick={closeModal} style={divStyle}>
       <div className="mymodal-content" onClick={(e) => e.stopPropagation()}>
-        
         <span className="close" onClick={closeMyModal}>
           &times;
         </span>

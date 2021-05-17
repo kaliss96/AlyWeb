@@ -1,7 +1,7 @@
 import React from 'react'
 import './InputFormText.css'
 
-const InputFormText = ({errors={}, reference={},keypress, placeholder, title, name, type, pattern={}}) => {
+const InputFormText = ({errors={}, reference={},handlechange,keypress, placeholder, title, name, type, pattern}) => {
     return (
         <div className="form-group">
             <label className="label-input" type="text">
@@ -17,12 +17,13 @@ const InputFormText = ({errors={}, reference={},keypress, placeholder, title, na
                 ref={reference}
                 autoComplete="off"
 				onKeyPress={keypress}
+				onChange={handlechange}
                 placeholder={placeholder}
             />
             </div>
-            {errors.nombre && (
+            {errors && (
             <label className="error-label">
-                {errors.nombre.message}
+                {errors.message}
             </label>
             )}
         </div>
@@ -30,5 +31,3 @@ const InputFormText = ({errors={}, reference={},keypress, placeholder, title, na
 }
 
 export default InputFormText;
-
-

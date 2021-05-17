@@ -3,7 +3,7 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import './InputPassword.css'
 
-const InputPassword = ({ reference, errors, title, name, placeholder}) => {
+const InputPassword = ({ reference,change_event='', errors, title, name, placeholder}) => {
     
     const [showPassword, setShowPassword] = useState(false)
 
@@ -19,6 +19,7 @@ const InputPassword = ({ reference, errors, title, name, placeholder}) => {
                     id={name}
                     className="form-input"
                     autoComplete="off"
+					onChange={change_event}
                     placeholder={placeholder}
                     ref={reference}
                 />
@@ -27,9 +28,9 @@ const InputPassword = ({ reference, errors, title, name, placeholder}) => {
                         {!showPassword ? <VisibilityOff /> : <Visibility />}
                     </i>
                 }
-                {errors.password && (
+                {errors && (
                     <label className="error-label">
-                        {errors.password.message}
+                        {errors.message}
                     </label>
                 )}
             </div>

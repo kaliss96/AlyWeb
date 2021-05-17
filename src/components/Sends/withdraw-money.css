@@ -29,3 +29,18 @@
 .input-cant {
   width: 30%;
 }
+
+.style-cant {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+  .style-cant {
+    display: none;
+  }
+}

@@ -1,0 +1,77 @@
+@media (min-width: 1200px) {
+    .confirm-button-lg {
+        background-color: transparent;
+        background-color: #feca2eb7;
+        border-radius: 37px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .confirm-btns-lg {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .modal-contenido-lg {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.03);
+        color: rgb(224, 194, 22);
+        margin-bottom: 0;
+        padding: 10px 20px;
+        padding: 0.75rem 1.25rem;
+        text-align: center;
+    }
+
+    /* Modal content */
+    .mymodal-content-lg {
+        background-color: #151515;
+        width: 40%; /* Width in proportion to its parent container*/
+        height: 60%; /* Height in proportion to its parent container */
+        margin: auto; /* Auto margin according to the element width */
+        padding: 10px;
+        border: 1px solid #ffc107;
+        border-radius: 2px; /* Optional. Rounds container corners */
+    }
+
+    .mycard-content {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        color: #fff;
+        text-align: center;
+        font-family: Roboto, Arial, Helvetica, sans-serif !important;
+        font-weight: 400;
+        font-size: 1.0em;
+    }
+    
+    .mycard-header-lg {
+        display: flex;
+        justify-content: center;
+        width: 40em;
+        height: 15em;
+    }
+
+    .mycard-text {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        color: rgb(224, 194, 22);
+        text-align: center;
+        font-family: Roboto, Arial, Helvetica, sans-serif !important;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    .rps_img_lg {
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

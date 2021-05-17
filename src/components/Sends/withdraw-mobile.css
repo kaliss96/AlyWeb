@@ -1,0 +1,61 @@
+.btn-withdraw {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.cant-usd-mbl {
+  width: 45%;
+}
+
+.cont-mark-bal-withd {
+  width: 72%;
+}
+
+.rps_img_logo {
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.title-wallet-mobile {
+  color: #fecb2e;
+  font-size: 80%;
+}
+
+.style-mont-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.mont-aly-mbl {
+  width: 35%;
+}
+
+.title-size-mobile {
+  color: #fecb2e;
+  font-size: 80%;
+}
+
+.withdraw-funds-mobile {
+  color: blue;
+}
+  /* Small devices (landscape phones, 576px and up) */
+  @media screen and (min-width: 360px)  {
+
+    .cont-mark-bal-withd{
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      margin: auto;
+    }
+}  

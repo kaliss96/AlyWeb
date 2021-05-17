@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 600px) {
     #postalcode.form-row{
-      flex-direction: column;
+        flex-direction: column;
     }
     #postalcode.form-row{
         flex-direction: column;
@@ -52,7 +52,7 @@
 
 @media only screen and (max-width: 768px) {
     #postalcode.form-row{
-      flex-direction: column;
+        flex-direction: column;
     }
     #postalcode.form-row{
         flex-direction: column;
